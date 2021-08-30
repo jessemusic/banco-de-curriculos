@@ -14,9 +14,10 @@ app.use(bodyParse.json());// json de entrada no body
 app.get("/formulario", (req, res)=>{
     res.sendFile(__dirname + "/html/index.html")
 })
+console.log(Candidato);
 app.post("/enviar", (req, res)=>{
-    Candidato.create({
-        nomeCompleto: req.body.nomeCompleto, 
+     Candidato.create({
+        nomeCompleto: '{nomeCompleto.form-control}', 
         cargoPretendido: req.body.cargoPretendido,
         dataDeNascimento: req.body.dataDeNascimento,
         estadoCivil: req.body.estadoCivil,

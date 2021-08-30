@@ -58,5 +58,5 @@ const Candidato  = db.sequelize.define('candidatos', {
     }
 
 })
-
+module.exports = Candidato;
 // Candidato.sync({force: true})
